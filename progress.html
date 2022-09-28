@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>default progress tag</h3>
+    <progress min="0" max="100" style="width:100% ;"></progress>
+    <br>
+    <h3>static progress</h3>
+    <progress min="0" max="100" value="80" style="width:100% ;"></progress>
+    <h3>dynamic progress</h3>
+    <br>
+    <progress min="0" max="100" style="width: 100%;" id="prog"></progress>
+    <script>
+        var current=1;
+        function callProgress() {
+            if(current<=100) {
+                current++;
+                document.getElementById("prog").value = current;
+            }
+        }
+        setInterval("callProgress()",1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #mydialogue {
+        width: 200px;
+
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+<body>
+    <h4>Dialogue box</h4>
+    <button id="details"> see the details</button>
+    <dialog id="mydialogue">
+        <div>
+            <h4>this is heading</h4>
+            <span id="closediaglogue"></span>
+        </div>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque corporis perferendis sunt ea doloribus ratione. Quo quod quibusdam similique aliquid nesciunt, sequi molestias! Nisi incidunt modi dolore laudantium, et ipsum.
+        </p>
+    </dialog>
+    <script>
+        document.getElementById("details").onclick=()=>{
+            document.getElementById("mydialogue").show();
+        }
+        document.getElementById("closeButton").onclick=()=>{
+            document.getElementById("mydialogue").close();
+        }
+        document.getElementById("closedialogue").onclick=()=>{
+            document.getElementById("mydialogue").close();
+        }
+    </script>
+</body>
+</html>
